@@ -20,11 +20,19 @@ const tabs = [
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("Bridge"); // Default Tab
   const [showModal, setShowModal] = useState(false);
+  const [clickCount, setClickCount] = useState(0); // Track number of clicks
+
 
   useEffect(() => {
     // Add an event listener to detect clicks on the page
     const handleClick = () => {
-      setShowModal(true);
+      setClickCount((prevCount) => {
+        const newCount = prevCount + 1;
+        if (newCount === 3) {
+          setShowModal(true); // Show modal on the 3rd click
+        }
+        return newCount;
+      });
     };
 
     document.addEventListener("click", handleClick);
