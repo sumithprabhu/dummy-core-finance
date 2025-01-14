@@ -4,9 +4,13 @@ import Bridge from "@/components/app/bridgeInterface";
 import Swap from "@/components/app/swapInterface";
 import Pool from "@/components/app/poolInterface";
 import About from "@/components/app/aboutInterface";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Lottie from "react-lottie-player";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import Lottie from "react-lottie-player";
 import siteDownAnimation from "../../../public/site-down.json"; 
+import dynamic from "next/dynamic";
+
+const ConnectButton = dynamic(() => import("@rainbow-me/rainbowkit").then(mod => mod.ConnectButton), { ssr: false });
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 
 const tabs = [

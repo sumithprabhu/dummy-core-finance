@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { useAccount, useSigner, useWalletClient, useWaitForTransactionReceipt,
   useWriteContract,} from "wagmi";

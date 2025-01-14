@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Spotlight from "../spotlight";
 export default function About() {

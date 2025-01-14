@@ -8,8 +8,10 @@ import { faArrowRightArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { approveToken } from "@/utils/approveToken";
 import { useAccount, useSigner, useWalletClient, useWaitForTransactionReceipt,
   useWriteContract,useSignMessage} from "wagmi";
-  import BridgePopup from "./popUp"; // Import the above component
+  // import BridgePopup from "./popUp.js"; // Import the above component
 import sendTokens from "@/utils/transfer";
+import dynamic from "next/dynamic";
+const BridgePopup = dynamic(() => import("./popUp"), { ssr: false });
 
 
 export default function Bridge() {

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Lottie from "react-lottie";
 import loaderAnimation from "../../../public/loader.json"; // Replace with your loader animation file
