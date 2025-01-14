@@ -3,10 +3,12 @@ import Header from "../components/Header"; // Assuming you have the Header compo
 import Footer from "../components/Footer"; // Assuming you have the Footer component
 
 import animationData from "../../public/animation-home.json";
-import Lottie from "react-lottie-player";
+// import Lottie from "react-lottie-player";
 import animationDataLive from "../../public/animation-live.json";
 import { useState } from "react";
 import Workflows from "@/components/workflow";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 export default function HeroSection() {
   const [openIndex, setOpenIndex] = useState(0);
