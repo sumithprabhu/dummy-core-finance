@@ -91,7 +91,7 @@ export default function Header() {
           {/* Launch Playground or Connect Wallet */}
           {isRootPage ? (
             <a
-              href="/app"
+              href="/dapp"
               className="text-lg inline-block text-white font-semibold px-6 py-2 rounded-lg bg-gradient-to-t from-indigo-600 to-indigo-500 py-[5px] text-white hover:bg-indigo-700 transition-all duration-300"
               style={{ maxWidth: "250px" }}
             >
